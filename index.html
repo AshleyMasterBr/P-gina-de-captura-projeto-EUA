@@ -3,42 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pisos de Alto Padrão | Orçamento Instantâneo</title>
+    <title>Pisos de Elite | Instalação Profissional</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="container">
-            <div class="logo">LOGOTIPO AQUI</div>
-            <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Falar com Especialista</a>
+            <div class="logo">PIXEL<span>PISOS</span></div>
+            <div class="header-contact">
+                <span>Dúvidas?</span>
+                <a href="#" class="btn-cta-small">FALAR NO WHATSAPP</a>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero-section">
+        <div class="overlay"></div>
         <div class="container hero-grid">
-            <div class="hero-text">
-                <h1>O Piso dos Seus Sonhos, Instalado com Perfeição.</h1>
-                <p>Atendemos qualquer metragem. Da reforma do lavabo ao projeto da casa inteira, garantimos acabamento premium e agilidade.</p>
-                <ul class="features">
-                    <li>✅ Instalação profissional certificada</li>
-                    <li>✅ Sem limite de metragem mínima</li>
-                    <li>✅ Orçamento rápido e transparente</li>
-                </ul>
+            <div class="hero-content">
+                <span class="badge">LÍDER EM INSTALAÇÃO NA REGIÃO</span>
+                <h1>Transforme seu ambiente com pisos de <strong>alto padrão.</strong></h1>
+                <p>Instalação impecável para qualquer metragem. Especialistas em vinílicos, laminados e porcelanatos com garantia total.</p>
+                <div class="trust-icons">
+                    <span>⭐ 5.0 no Google</span>
+                    <span>🛡️ Garantia de 1 Ano</span>
+                </div>
             </div>
-            
-            <div class="form-container">
-                <h3>Solicite seu Orçamento</h3>
-                <form id="piso-form">
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="tel" placeholder="Seu WhatsApp" required>
-                    <select id="metragem" required>
-                        <option value="" disabled selected>Metragem aproximada</option>
-                        <option value="pequena">Abaixo de 30m² (Taxa de Instalação)</option>
-                        <option value="media">Entre 30m² e 100m²</option>
-                        <option value="grande">Acima de 100m²</option>
-                    </select>
-                    <button type="submit">RECEBER ORÇAMENTO AGORA</button>
+
+            <div class="form-card">
+                <h2>Solicite um Orçamento</h2>
+                <p>Resposta em menos de 15 minutos.</p>
+                <form>
+                    <div class="input-group">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Ex: Julio Silva" required>
+                    </div>
+                    <div class="input-group">
+                        <label>WhatsApp</label>
+                        <input type="tel" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Metragem (m²)</label>
+                        <select required>
+                            <option value="">Selecione a área</option>
+                            <option value="pequena">Até 30m² (Taxa de Ativação)</option>
+                            <option value="media">31m² a 100m²</option>
+                            <option value="grande">Acima de 100m²</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-main">OBTER PREÇO AGORA</button>
                 </form>
             </div>
         </div>

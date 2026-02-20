@@ -1,25 +1,63 @@
-body { font-family: 'Inter', sans-serif; margin: 0; color: #2c3345; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+:root {
+    --primary: #101828; /* Navy Blue de Toronto */
+    --accent: #EAB308;  /* Amarelo de Atenção */
+    --text-dark: #1F2937;
+    --text-light: #F9FAFB;
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
 
-header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
-.btn-whatsapp { background: #25d366; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: 600; }
+body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text-dark); background: #fff; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-.hero { background: #f9fafb; padding: 80px 0; }
-.hero-grid { display: grid; grid-template-columns: 1fr 450px; gap: 40px; align-items: center; }
+/* Navbar */
+.navbar { padding: 20px 0; border-bottom: 1px solid #eee; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 800; font-size: 24px; color: var(--primary); }
+.logo span { color: var(--accent); }
+.btn-cta-small { background: #25D366; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 12px; }
 
-.hero-text h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; color: #1a1f2b; }
-.features { list-style: none; padding: 0; margin-top: 30px; }
-.features li { margin-bottom: 12px; font-size: 18px; }
+/* Hero Section */
+.hero-section { 
+    position: relative; 
+    padding: 100px 0; 
+    background: url('https://images.unsplash.com/photo-1581850518616-bcb8077fa212?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+    color: #fff;
+    min-height: 600px;
+}
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(16, 24, 40, 0.85); z-index: 1; }
+.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
 
-.form-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-.form-container h3 { margin-top: 0; text-align: center; margin-bottom: 25px; }
+.hero-content h1 { font-family: 'Poppins', sans-serif; font-size: 56px; line-height: 1.1; margin-bottom: 24px; }
+.hero-content h1 strong { color: var(--accent); }
+.hero-content p { font-size: 20px; opacity: 0.9; margin-bottom: 30px; }
+.badge { background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 20px; display: inline-block; }
 
-input, select, button { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-family: 'Inter'; }
-button { background: #1a1f2b; color: white; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
-button:hover { background: #333; }
+/* Form Card */
+.form-card { 
+    background: #fff; 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: var(--shadow); 
+    color: var(--text-dark); 
+}
+.form-card h2 { margin-top: 0; font-size: 28px; text-align: center; margin-bottom: 8px; }
+.form-card p { text-align: center; color: #666; margin-bottom: 30px; font-size: 14px; }
 
-/* Responsivo para celular */
-@media (max-width: 768px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-text h1 { font-size: 32px; }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+.input-group input, .input-group select { 
+    width: 100%; padding: 14px; border: 1px solid #D1D5DB; border-radius: 6px; font-size: 16px; box-sizing: border-box; 
+}
+
+.btn-main { 
+    width: 100%; background: var(--accent); color: #000; border: none; padding: 18px; 
+    border-radius: 6px; font-weight: 800; font-size: 16px; cursor: pointer; transition: 0.2s; 
+}
+.btn-main:hover { background: #d1a006; transform: translateY(-2px); }
+
+/* Mobile */
+@media (max-width: 992px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-content h1 { font-size: 38px; }
+    .form-card { margin-top: 40px; }
 }

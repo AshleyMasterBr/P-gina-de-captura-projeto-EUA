@@ -1,0 +1,25 @@
+body { font-family: 'Inter', sans-serif; margin: 0; color: #2c3345; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+.btn-whatsapp { background: #25d366; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: 600; }
+
+.hero { background: #f9fafb; padding: 80px 0; }
+.hero-grid { display: grid; grid-template-columns: 1fr 450px; gap: 40px; align-items: center; }
+
+.hero-text h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; color: #1a1f2b; }
+.features { list-style: none; padding: 0; margin-top: 30px; }
+.features li { margin-bottom: 12px; font-size: 18px; }
+
+.form-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.form-container h3 { margin-top: 0; text-align: center; margin-bottom: 25px; }
+
+input, select, button { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-family: 'Inter'; }
+button { background: #1a1f2b; color: white; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+button:hover { background: #333; }
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-text h1 { font-size: 32px; }
+}
